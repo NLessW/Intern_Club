@@ -19,4 +19,28 @@ C는 문제에 없어 C++부터 시작했다.<br/>
 <br/><br/>
 
 ## 1. C++
+
+우선 이 문제는 생각보다 간단했다.<br/>
+2개의 배열에서 각 위치에 있는 요소들을 더하고, 새 2차원 배열로 반환하는 문제이다.<br/><br/>
+내가 사용한 방법은 2중 for문으로 2차원 배열에서 각 위치에 있는 요소를 꺼낸 뒤 새 배열을 만들어 저장했다.<br/>
+
+``` C
+#include <string>
+#include <vector>
+
+using namespace std;
+
+vector<vector<int>> solution(vector<vector<int>> arr1, vector<vector<int>> arr2) {
+    vector<vector<int>> answer;
+    
+    for(int i=0; i<arr1.size(); ++i){
+        vector<int> arr3;
+        for(int j=0; j<arr1[i].size();++j){
+            arr3.push_back(arr1[i][j] + arr2[i][j]);
+        }
+        answer.push_back(arr3);
+}
+    return answer;
+}
+```
  
