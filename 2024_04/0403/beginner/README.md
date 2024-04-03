@@ -101,3 +101,22 @@ int solution(int angle) {
 ``` 
 이 사람 역시 삼항연산으로 간단하게 해결하였다..<br/>
 단순히 문제만 보고 제일 쉬운 조건문 if로 처리할려고 했던 내가 작아지는 느낌이였고 다른 프로젝트에선 종종 사용하던 방식을 여기선 왜 생각하지 못했을까 란 생각이 컸다.
+
+## 3. JAVA/JavaScript
+``` JAVA
+class Solution {
+    public int solution(int angle) {
+        int answer = 0;
+        if(angle>0 && angle<90){
+          return 1;
+        }else if(angle==90){
+          return 2;
+        }else if(angle>90 && angle<180){
+          return 3;
+        }else if(angle==180){
+          return 4;
+        }
+        return answer;
+    }
+}
+``` 
