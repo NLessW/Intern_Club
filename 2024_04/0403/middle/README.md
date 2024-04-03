@@ -53,3 +53,7 @@ for(int i=0; i<arr1.size(); i++)
 vector<int> arr3;
 ```
 - 값이 임시로 저장될 배열 arr3를 만든다.
+``` C
+for(int j = 0; j < arr1[i].size(); j++)
+```
+- 각 행의 요소에 접근하는 반복문이다.
