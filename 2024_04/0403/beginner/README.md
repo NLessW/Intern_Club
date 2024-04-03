@@ -113,3 +113,15 @@ class Solution {
     }
 }
 ``` 
+이것 또한 난 if문으로 간단하게 처리하였지만 역시 삼항연산 방식이 존재한다.<br/>
+이런 방식이 바로 떠오르지 않는다는 점을 계속 반성하고 보완해 나가겠다.<br/>
+
+다른 사람의 답<br/>
+``` JAVA
+class Solution {
+    public int solution(int angle) {
+        return angle == 180 ? 4 : angle < 90 ? 1 : angle == 90 ? 2 : angle > 90 ? 3 : 0;
+    }
+}
+``` 
+
