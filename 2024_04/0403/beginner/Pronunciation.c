@@ -11,8 +11,7 @@ int solution(int angle) {
         return 2;
     }else if(angle>90 && angle<180){
         return 3;
-    }
-    else if(angle==180){
+    }else if(angle==180){
         return 4;
     }
     return answer;
