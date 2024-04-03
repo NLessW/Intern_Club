@@ -57,3 +57,8 @@ vector<int> arr3;
 for(int j = 0; j < arr1[i].size(); j++)
 ```
 - 각 행의 요소에 접근하는 반복문이다.
+
+``` C
+arr3.push_back(arr1[i][j] + arr2[i][j]);
+```
+- 위에서 만든 임시 배열에 같은 위치에 있는 요소를 더한 뒤 저장한다.
