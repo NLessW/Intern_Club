@@ -33,9 +33,9 @@ using namespace std;
 vector<vector<int>> solution(vector<vector<int>> arr1, vector<vector<int>> arr2) {
     vector<vector<int>> answer;
     
-    for(int i=0; i<arr1.size(); ++i){
+    for(int i=0; i<arr1.size(); i++){
         vector<int> arr3;
-        for(int j=0; j<arr1[i].size();++j){
+        for(int j=0; j<arr1[i].size();j++){
             arr3.push_back(arr1[i][j] + arr2[i][j]);
         }
         answer.push_back(arr3);
@@ -43,4 +43,9 @@ vector<vector<int>> solution(vector<vector<int>> arr1, vector<vector<int>> arr2)
     return answer;
 }
 ```
- 
+간단하게 주요 부위만 설명을 적어보겠다
+
+``` C
+for(int i=0; i<arr1.size(); i++)
+```
+- 첫 번째 배열 arr1에 접근하는 반복문이다. 
