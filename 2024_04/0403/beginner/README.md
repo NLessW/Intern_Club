@@ -28,7 +28,7 @@ angle은 정수입니다.<br/>
 |91|3|
 |180|4|
 
-## 1. C언어
+## 1. C
 ``` C
 #include <stdio.h>
 #include <stdbool.h>
@@ -54,3 +54,39 @@ int solution(int angle) {
 제일 무난한 방법이고 이 문제에서 사용한 언어는 거의 다 이 방식으로 해결하였다. <br/>
 angle의 값을 입력받아 조건에 맞는 값을 반환하게 하는 방식이다.<br/>
 
+다른 사람의 답
+``` C
+#include <stdio.h>
+#include <stdbool.h>
+#include <stdlib.h>
+
+int solution(int ang) {
+    int ans = 1;    
+    return ang<90?1:ang==90?2:ang<180?3:4;
+}
+``` 
+이렇게 삼항연산으로 간단하게 해결하는법이 있었다는 것을 깨달았다..<br/>
+
+
+## 2. C++
+``` C
+#include <string>
+#include <vector>
+
+using namespace std;
+
+int solution(int angle) {
+    int answer = 0;
+    if(angle>0 && angle<90){
+        return 1;
+    }else if(angle==90){
+        return 2;
+    }else if(angle>90 && angle<180){
+        return 3;
+    }else if(angle==180){
+        return 4;
+    }
+    return answer;
+}
+
+``` 
