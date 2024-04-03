@@ -49,3 +49,7 @@ vector<vector<int>> solution(vector<vector<int>> arr1, vector<vector<int>> arr2)
 for(int i=0; i<arr1.size(); i++)
 ```
 - 첫 번째 배열 arr1에 접근하는 반복문이다. 
+``` C
+vector<int> arr3;
+```
+- 값이 임시로 저장될 배열 arr3를 만든다.
