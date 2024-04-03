@@ -29,7 +29,7 @@ angle은 정수입니다.<br/>
 |180|4|
 
 ## 1. C언어
-```
+``` C
 #include <stdio.h>
 #include <stdbool.h>
 #include <stdlib.h>
