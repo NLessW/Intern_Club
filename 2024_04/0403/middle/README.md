@@ -69,5 +69,25 @@ answer.push_back(arr3);
 - 임시로 만든 배열의 값을 결과 배열에 추가한다.
 
 임시 배열을 만드는 방법이 제일 대중적인것 같다.<br/>
-이 문제를 풀고 다른 사람의 답을 보니 나와 똑같은 방식이였다...<br/>
+이 문제를 풀고 다른 사람의 답을 보니 나와 똑같은 방식이였다...<br/><br/>
 
+## 2. Java
+
+Java도 C++와 비슷한 방식인데 살짝 바꿔서 풀어보았다.
+``` JAVA
+class Solution {
+    public int[][] solution(int[][] arr1, int[][] arr2) {
+        int[][] answer = {};
+        answer=arr1;
+        for(int i=0; i<arr1.length; i++){
+            for(int j=0; j<arr1[i].length; j++){
+                answer[i][j]+=arr2[i][j];
+            }
+        }
+        return answer;
+    }
+}
+```
+여기서 C++가 바뀐 방식은 딱 하나다.<br/>
+answer의 배열 크기와 arr1의 배열 크기가 똑같다는걸 이용했다.<br/>
+answer에 arr1을 할당한 뒤 나머지는 C++과 방식은 동일하다.
