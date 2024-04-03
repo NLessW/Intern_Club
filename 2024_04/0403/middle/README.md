@@ -92,3 +92,23 @@ class Solution {
 answer의 배열 크기와 arr1의 배열 크기가 똑같다는걸 이용했다.<br/>
 answer에 arr1을 할당한 뒤 나머지는 C++과 방식은 동일하다.<br/>
 근데 이것도 어째 풀고 나와보니 나와 같은 방법으로 푼 사람이 많았다...<br/>
+
+## 3. JavaScript
+
+C++과 방식은 동일하다.<br/>
+임시 배열을 하나 만들고 저장 후 다시 결과 배열에 저장한다.
+<br/>
+
+``` JS
+function solution(arr1, arr2) {
+    var answer = [];
+    for(var i=0; i<arr1.length;i++){
+        var result=[];
+        for(var j=0; j<arr1[i].length;j++){
+            result.push(arr1[i][j]+arr2[i][j]);
+        }
+        answer.push(result);
+    }
+    return answer;
+}
+```
