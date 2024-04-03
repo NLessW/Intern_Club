@@ -112,3 +112,11 @@ function solution(arr1, arr2) {
     return answer;
 }
 ```
+JavaScript가 단순하게 사용가능한 언어라 생각해 다른 방법은 없겠지. 라는 생각을 했었다.<br/>
+하지만 머리 좋은 사람들은 널렸다.<br/><br/>
+다른 사람의 답
+``` JS
+function sumMatrix(A,B){
+    return A.map((arr1, idx1) => arr1.map((val, idx2) => val+B[idx1][idx2]));
+}
+```
