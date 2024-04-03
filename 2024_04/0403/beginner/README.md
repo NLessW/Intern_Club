@@ -43,10 +43,14 @@ int solution(int angle) {
         return 2;
     }else if(angle>90 && angle<180){
         return 3;
-    }
-    else if(angle==180){
+    }else if(angle==180){
         return 4;
     }
     return answer;
 }
 ```
+
+조건문 if와 else if로 간단하게 만들어보았다.<br/>
+제일 무난한 방법이고 이 문제에서 사용한 언어는 거의 다 이 방식으로 해결하였다. <br/>
+angle의 값을 입력받아 조건에 맞는 값을 반환하게 하는 방식이다.<br/>
+
