@@ -148,3 +148,154 @@ cout << count;
 ## 발생한 문제들
 이 부분은 C언어를 C++로 변환한 과정으로 발생한 문제는 없었다.
 
+## 3. JAVA
+``` JAVA
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int count = 0;
+        int[] a1 = new int[26];
+        int[] b1 = new int[26];
+
+        String a2 = scanner.next();
+        String b2 = scanner.next();
+
+        for (char c : a2.toCharArray()) {
+            if (c >= 'a' && c <= 'z') {
+                a1[c - 'a']++;
+            }
+        }
+
+        for (char c : b2.toCharArray()) {
+            if (c >= 'a' && c <= 'z') {
+                b1[c - 'a']++;
+            }
+        }
+
+        for (int i = 0; i < 26; i++) {
+            count += Math.abs(a1[i] - b1[i]);
+        }
+
+        System.out.println(count);
+        scanner.close();
+    }
+}
+```
+
+## 문제 해결
+위 내용과 똑같다.
+
+## 코드 설명
+1. 입력 부분은 생략하고 첫 번째 문자열과 두 번째 문자열의 알파벳 등장 횟수를 카운트 한다.
+``` JAVA
+for (char c : a2.toCharArray()) {
+    if (c >= 'a' && c <= 'z') {
+        a1[c - 'a']++;
+    }
+}        
+for (char c : b2.toCharArray()) {
+    if (c >= 'a' && c <= 'z') {
+        b1[c - 'a']++;
+    }
+}
+```
+2. 차이를 계산한다.
+``` JAVA
+for (int i = 0; i < 26; i++) {
+    count += Math.abs(a1[i] - b1[i]);
+}
+```
+3. 출력한 뒤 scanner를 닫는다.
+``` JAVA
+System.out.println(count);
+scanner.close();
+```
+
+## 발생한 문제
+C++을 Java로 변환한 과정으로 발생한 문제는 오타등의 에러말고는 없었다.<br/>
+
+## 4. Python
+### 코드
+``` py
+count = 0
+a1 = [0] * 26
+b1 = [0] * 26
+
+a2 = input()
+b2 = input()
+
+for c in a2:
+    if 'a' <= c <= 'z':
+        a1[ord(c) - ord('a')] += 1
+
+for c in b2:
+    if 'a' <= c <= 'z':
+        b1[ord(c) - ord('a')] += 1
+
+for i in range(26):
+    count += abs(a1[i] - b1[i])
+
+print(count)
+```
+## 문제 해결
+다른 언어와 같은 방식으로 해결하였다.
+
+## 코드 설명
+1. 입력부분은 생략한다. 똑같이 반복문을 이용해 문자열에서 알파벳의 등장 횟수를 카운트한다.
+``` py
+for c in a2:
+    if 'a' <= c <= 'z':
+        a1[ord(c) - ord('a')] += 1
+
+for c in b2:
+    if 'a' <= c <= 'z':
+        b1[ord(c) - ord('a')] += 1
+```
+2. 차이를 계산해서 count변수에 누적시키면서 저장한다.
+``` py
+for i in range(26):
+    count += abs(a1[i] - b1[i])
+```
+3. 출력한다.
+``` py
+print(count)
+```
+
+## 발생한 문제들
+1. NZEC
+   처음에 함수를 이용해 해결할려다 발생한 문제이다.<br/>
+
+처음 작성한 코드
+```py
+def main():
+    count = 0
+    a1 = [0] * 26
+    b1 = [0] * 26
+
+    a2, b2 = input().split()
+
+    for c in a2:
+        if 'a' <= c <= 'z':
+            a1[ord(c) - ord('a')] += 1
+
+    for c in b2:
+        if 'a' <= c <= 'z':
+            b1[ord(c) - ord('a')] += 1
+
+    for i in range(26):
+        count += abs(a1[i] - b1[i])
+
+    print(count)
+
+if __name__ == "__main__":
+    main()
+```
+아마 입력 방식이 한 줄로 입력한 것이 문제가 발생하였다고 생각이 든다.<br/>
+추후에 입력 방식을 수정한 뒤 재시도를 하였을 땐 성공하였다.<br/>
+![image](https://github.com/NLessW/Intern_Club/assets/63160418/45cfdc75-0740-4dcc-b48e-a5585af927c5)
+
+## 마치며
+이 문제는 단순하게 접근하고 단순한 사고력을 이용한 문제로 어렵게만 생각하지 않으면 쉽게 접근하여 풀 수 있다 생각한다.<br/>
+이번엔 문제를 해결하면서 NZEC과 BrokenPipe 에러가 발생하였지만, 수정에 성공했으며 좀 더 신중하게 문제에 접근하고 코드를 작성하는 연습을 해야겠단 생각이 든 문제였다<br/>
