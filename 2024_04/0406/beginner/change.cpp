@@ -12,10 +12,8 @@ int main() {
     defaultMoney -= changesMoney;
 
     for (int i = 0; defaultMoney > 0 && i < coin.size(); ++i) {
-        while (defaultMoney >= coin[i]) {
-            defaultMoney -= coin[i];
-            count++;
-        }
+        count += defaultMoney / coin[i];
+        defaultMoney %= coin[i];
     }
 
     cout << count;
