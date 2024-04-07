@@ -77,3 +77,74 @@ printf("%d",c);
    참조 : https://stackoverflow.com/questions/4584904/what-causes-the-broken-pipe-error<br/>
 
    
+## 2. C++
+### 코드
+``` C++
+#include <iostream>
+#include <string>
+#include <vector>
+#include <cmath>
+
+using namespace std;
+
+int main() {
+    int count = 0;
+    vector<int> a1(26, 0), b1(26, 0); 
+
+    string a2, b2;
+    cin >> a2 >> b2;
+
+    for (char c : a2) {
+        if (c >= 'a' && c <= 'z') {
+            a1[c - 'a']++;
+        }
+    }
+
+    for (char c : b2) {
+        if (c >= 'a' && c <= 'z') {
+            b1[c - 'a']++;
+        }
+    }
+
+    for (int i = 0; i < 26; i++) {
+        count += abs(a1[i] - b1[i]);
+    }
+
+    cout << count;
+    return 0;
+}
+```
+
+## 문제 해결
+각 알파벳의 횟수의 차이를 계산하여 두 문자열의 알파벳 등장 횟수의 차이를 출력하도록 하였다.
+
+### 코드 설명
+1. 각 문자열에서 알파벳 등장 횟수를 카운트 한다.
+``` C++
+for (char c : a2) {
+    if (c >= 'a' && c <= 'z') {
+        a1[c - 'a']++;
+    }
+}
+
+for (char c : b2) {
+    if (c >= 'a' && c <= 'z') {
+        b1[c - 'a']++;
+    }
+}
+```
+2. 두 문자열의 알파벳 등장 횟수의 차이를 계산한다
+``` C++
+for (int i = 0; i < 26; i++) {
+        count += abs(a1[i] - b1[i]);
+}
+```
+
+3. 결과를 출력한다.
+``` C++
+cout << count;
+```
+
+## 발생한 문제들
+이 부분은 C언어를 C++로 변환한 과정으로 발생한 문제는 없었다.
+
