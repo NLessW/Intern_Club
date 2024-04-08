@@ -9,6 +9,5 @@ double solution(int arr[], size_t arr_len) {
     for(int i = 0; i<arr_len; i++){
         sum += arr[i];
     }
-    answer = (double)sum / arr_len;
-    return answer;
+    return (double)sum / arr_len;
 }
