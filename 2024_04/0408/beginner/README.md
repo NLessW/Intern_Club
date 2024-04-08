@@ -76,9 +76,11 @@ class Solution {
 C와 방식은 같다.
 
 ### JavaScript
+```js
 function solution(arr) {
     return arr.reduce((a,b) => a+b) / arr.length;
 }
+```
 
 ## 코드 설명
 reduce()를 사용해 배열의 각 요소를 순회를 시키며 (a,b) => a+b로 각 배열의 요소인 b를 a에 더하는 것이다.
