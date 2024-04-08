@@ -9,6 +9,5 @@ double solution(vector<int> arr) {
     for(int i=0; i<arr.size(); i++){
         sum += arr[i];
     }
-    answer = (double)sum/arr.size();
-    return answer;
+    return (double)sum/arr.size();
 }
