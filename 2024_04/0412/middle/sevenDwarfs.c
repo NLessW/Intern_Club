@@ -12,7 +12,7 @@ int main(){
 	
 	int height = sum - 100;
 	int notD1 = 0;
-    int notD2 = 0;
+    	int notD2 = 0;
 	
 	for(i = 0; i<9; i++){
 		for(j = i+1; j<9; j++){
