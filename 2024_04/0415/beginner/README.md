@@ -58,3 +58,30 @@ answer[num2] = arr[0];
 |test 2|0.01 ms|4.2 mb|
 |test 3|0.01 ms|4.21 mb|
 |test 4|0.01 ms|4.13 mb|
+
+
+## 2. C++
+``` cpp
+#include <string>
+#include <vector>
+
+using namespace std;
+
+string solution(string my_string, int num1, int num2) {
+    vector<char> char_vector(my_string.begin(), my_string.end());
+    char temp = char_vector[num1];
+    char_vector[num1] = char_vector[num2];
+    char_vector[num2] = temp;
+    return string(char_vector.begin(), char_vector.end());
+}
+```
+
+## 문제 해결
+C와 방식은 같은데 vector로만 바꿨다.
+
+|count|Runtime|memory|
+|-----|-------|------|
+|test 1|0.01 ms|4.12 mb|
+|test 2|0.01 ms|4.14 mb|
+|test 3|0.02 ms|3.67 mb|
+|test 4|0.01 ms|4.2 mb|
