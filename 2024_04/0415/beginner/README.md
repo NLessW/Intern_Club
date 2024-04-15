@@ -52,3 +52,9 @@ answer[num2] = arr[0];
 ```
 문자열을 교환한다.
 
+|count|Runtime|memory|
+|-----|-------|------|
+|test 1|0.01 ms|4.15 mb|
+|test 2|0.01 ms|4.2 mb|
+|test 3|0.01 ms|4.21 mb|
+|test 4|0.01 ms|4.13 mb|
