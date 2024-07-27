@@ -5,7 +5,7 @@
 > - For example, given num = 2932, you have the following digits: two 2's, one 9 and one 3. Some of the possible pairs [new1, new2] are [22, 93], [23, 92], [223, 9] and [2, 329].<br/>
 > Return the minimum possible sum of new1 and new2.<br/>
 >주어진 정수 num은 정확히 4자리로 구성된 정수이다. num을 사용하여 두 개의 새로운 정수 new1과 new2로 분할한다. new1과 new2에는 선행 0이 있어도 되며, num에 있는 모든 숫자를 사용해야 한다.<br/>
-예를 들면, num = 2932가 주어지면 다음과 같은 숫자가 있다. 2개의 2, 1개의 9, 그리고 1개의 3. 간으한 몇 가지 쌍은 [new1,new2]에 [22,93],[22,92],[223,9],[2,329] 등이 있다.<br/>
+예를 들면, num = 2932가 주어지면 다음과 같은 숫자가 있다. 2개의 2, 1개의 9, 그리고 1개의 3. 가능한 몇 가지 쌍은 [new1,new2]에 [22,93],[22,92],[223,9],[2,329] 등이 있다.<br/>
 new1과 new2의 최소 가능한 합을 반환해라.<br/>
 
 
